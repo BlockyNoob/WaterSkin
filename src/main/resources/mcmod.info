@@ -1,0 +1,16 @@
+[
+{
+  "modid": "waterskin",
+  "name": "WaterSkin",
+  "description": "Adds a thirst tooltip to items with Tough as Nails thirst values.",
+  "version": "${version}",
+  "mcversion": "${mc_version}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Guyde","BlockyNoob"],
+  "credits": "Glitchfeind Mods, for the Tough as Nails mod.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
