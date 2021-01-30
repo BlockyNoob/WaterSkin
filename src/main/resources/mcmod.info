@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["Guyde","BlockyNoob"],
   "credits": "Glitchfeind Mods, for the Tough as Nails mod.",
-  "logoFile": "",
+  "logoFile": "assets/waterskin/textures/logo.png",
   "screenshots": [],
   "dependencies": []
 }
