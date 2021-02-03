@@ -42,4 +42,8 @@ public class WaterSkin
 		CommonNetworkManager.init();
 		logger.info(WaterSkin.NAME + " is in the Init phase.");
 	}
+	
+	public static void logInfo(String message) {
+		logger.info(message);
+	}
 }
