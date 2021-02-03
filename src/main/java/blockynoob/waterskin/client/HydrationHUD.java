@@ -1,7 +1,6 @@
 package blockynoob.waterskin.client;
 
 import blockynoob.waterskin.common.main.WaterSkin;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
@@ -20,9 +19,10 @@ import toughasnails.util.RenderUtils;
 
 @SideOnly(Side.CLIENT)
 public class HydrationHUD {
+	
 	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public void onPostRenderOverlayLast(RenderGameOverlayEvent.Post event) {
-
+		
 		if (event.getType() == ElementType.EXPERIENCE && SyncedConfig.getBooleanValue(GameplayOption.ENABLE_THIRST)) {
 			Minecraft mc = Minecraft.getMinecraft();
 			ScaledResolution resolution = event.getResolution();

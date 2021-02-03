@@ -14,6 +14,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import toughasnails.api.item.ItemDrink;
 import toughasnails.config.json.DrinkData;
 
 @SideOnly(Side.CLIENT)
@@ -41,7 +42,10 @@ public class ClientProxy extends CommonProxy {
 		DrinkData data = ThirstManager.getDrinkData(stack); //This is no longer relevant
 		if (data != null) {
 			ScaledResolution res = new ScaledResolution(mc);
-			float calculatedHydration = Math.min(2 * data.getHydrationRestored() * data.getThirstRestored(), 20);
+			float calculatedHydration = data.getHydrationRestored();
+			if (stack.getItem() instanceof ItemDrink) {
+				calculatedHydration = Math.min(2 * data.getHydrationRestored() * data.getThirstRestored(), 20);
+			}
 			float hydrationRemaining = 2f * ((int) calculatedHydration % 2);
 			int lengthThirst = ((data.getThirstRestored() + 1) >> 1) << 3;
 			int lengthHydration = 2 + ((int) ((calculatedHydration + 1.99) / 2.0)) * 6;
